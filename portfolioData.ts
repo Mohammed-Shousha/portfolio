@@ -1,3 +1,7 @@
+import GithubIcon from "./public/github.svg";
+import LinkedinIcon from "./public/linkedin.svg";
+import EmailIcon from "./public/email.svg";
+
 export const navLinks = [
   {
     name: "About",
@@ -25,17 +29,17 @@ export const contacts = [
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/mohammed-m-shousha/",
-    icon: "linkedin.svg",
+    icon: LinkedinIcon,
   },
   {
     name: "GitHub",
     link: "https://github.com/Mohammed-Shousha",
-    icon: "github.svg",
+    icon: GithubIcon,
   },
   {
     name: "Email",
     link: "mailto:mshoush29@gmail.com",
-    icon: "email.svg",
+    icon: EmailIcon,
   },
 ];
 
@@ -138,6 +142,7 @@ export const projects = [
       "mongodb",
       "stripe",
     ],
+    backendLink: "https://github.com/Mohammed-Shousha/online-store-backend",
   },
   {
     title: "Recipes App",
@@ -153,6 +158,7 @@ export const projects = [
       "express",
       "postgresql",
     ],
+    backendLink: "https://github.com/Mohammed-Shousha/recipes-app-backend",
   },
   {
     title: "Smart Shopping Cart",
@@ -173,7 +179,7 @@ export const projects = [
     title: "Portfolio",
     description:
       "My portfolio website that showcases my skills, projects and experiences.",
-    link: "",
+    link: "https://github.com/Mohammed-Shousha/portfolio",
     technologies: ["nextjs", "typescript", "tailwindcss"],
   },
   {
