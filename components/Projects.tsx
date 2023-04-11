@@ -1,7 +1,7 @@
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/portfolioData";
+import LinkIcon from "../public/link.svg";
 
 const Projects = () => (
   <div id="projects" className="mx-auto py-28 container">
@@ -16,6 +16,7 @@ const Projects = () => (
           description={project.description}
           link={project.link}
           technologies={project.technologies}
+          backendLink={project.backendLink}
         />
       ))}
     </div>
@@ -27,52 +28,69 @@ interface ProjectProps {
   description: string;
   link: string;
   technologies: string[];
+  backendLink?: string;
 }
 
-const Project = ({ title, description, technologies, link }: ProjectProps) => {
-  const { theme } = useTheme();
-
-  const src = theme === "dark" ? "link.svg" : "link-dark.svg";
-
-  return (
-    <div className="relative hover:-translate-y-3 duration-500 ease-in-out">
-      <div className="flex flex-col justify-between p-5 border-2 rounded-lg border-primary hover:border-accent dark:border-secondary dark:hover:border-accent w-80 sm:w-full h-80 lg:h-96 group">
-        <div>
-          <h3 className="mb-5 text-lg md:text-xl lg:text-2xl font-bold group-hover:text-accent">
-            {title}
-          </h3>
-          <p className="pb-2 text-sm md:text-base">{description}</p>
+const Project = ({
+  title,
+  description,
+  technologies,
+  link,
+  backendLink,
+}: ProjectProps) => (
+  <div className="relative hover:-translate-y-3 duration-500 ease-in-out">
+    <div className="flex flex-col justify-between p-5 border-2 rounded-lg border-primary hover:border-accent dark:border-secondary dark:hover:border-accent w-80 sm:w-full h-80 lg:h-96 group/card">
+      <div>
+        <h3 className="mb-5 text-lg md:text-xl lg:text-2xl font-bold group-hover/card:text-accent">
+          {title}
+        </h3>
+        <p className="pb-2 text-sm md:text-base">{description}</p>
+      </div>
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute top-5 right-4 group/link"
+      >
+        <div className="flex justify-items-center">
+          {backendLink && (
+            <p className="mr-1 sm:text-xs md:text-sm lg:text-base font-thin group-hover/link:text-accent duration-300">
+              Frontend
+            </p>
+          )}
+          <LinkIcon className="w-5 lg:w-6 fill-primary dark:fill-secondary group-hover/link:fill-accent duration-300" />
         </div>
+      </Link>
+      {backendLink && (
         <Link
-          href={link}
+          href={backendLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute top-6 right-4 "
+          className="absolute top-12 right-4 group/backend-link"
         >
-          <Image
-            src={src}
-            alt="Project Link"
-            width={24}
-            height={24}
-            className="w-5 lg:w-6"
-          />
+          <div className="flex justify-items-center">
+            <p className="mr-1 sm:text-xs md:text-sm lg:text-base font-thin group-hover/backend-link:text-accent duration-300">
+              Backend
+            </p>
+            <LinkIcon className="w-5 lg:w-6 fill-primary dark:fill-secondary group-hover/backend-link:fill-accent duration-300" />
+          </div>
         </Link>
-        <div className="mt-4 flex flex-wrap">
-          {technologies.map((technology, index) => (
-            <div key={index} className="mr-3 mb-3">
-              <Image
-                src={`${technology}.svg`}
-                alt={technology}
-                width={24}
-                height={24}
-                className="w-8 lg:w-10"
-              />
-            </div>
-          ))}
-        </div>
+      )}
+      <div className="mt-4 flex flex-wrap">
+        {technologies.map((technology, index) => (
+          <div key={index} className="mr-3 mb-3">
+            <Image
+              src={`${technology}.svg`}
+              alt={technology}
+              width={24}
+              height={24}
+              className="w-7 lg:w-9"
+            />
+          </div>
+        ))}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Projects;
