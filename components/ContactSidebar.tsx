@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { contacts } from "@/portfolioData";
 
@@ -13,13 +12,7 @@ const ContactSidebar = () => (
           rel="noopener noreferrer"
           className="p-3"
         >
-          <Image
-            src={contact.icon}
-            alt={contact.name}
-            width={28}
-            height={28}
-            className="mb-5 h-8 w-8"
-          />
+          <contact.icon className="mb-5 w-8 fill-accent hover:fill-primary dark:hover:fill-secondary duration-500" />
         </Link>
       ))}
     </div>
