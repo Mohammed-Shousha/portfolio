@@ -22,7 +22,7 @@ const NavBar = () => {
                   key={link.name}
                   href={link.link}
                   target={`${link.name === "Resume" ? "_blank" : ""}`}
-                  className="px-7 py-5 text-xl lg:text-2xl font-semibold hover:text-secondary dark:hover:text-primary duration-500"
+                  className="px-7 py-5 text-xl lg:text-2xl font-semibold hover:text-light dark:hover:text-dark duration-500"
                 >
                   {link.name}
                 </Link>
@@ -39,9 +39,9 @@ const NavBar = () => {
               aria-expanded="false"
             >
               {isMobileMenuOpen ? (
-                <CloseIcon className="w-8 fill-primary dark:fill-secondary" />
+                <CloseIcon className="w-8 fill-dark dark:fill-light" />
               ) : (
-                <MenuIcon className="w-8 stroke-primary dark:stroke-secondary" />
+                <MenuIcon className="w-8 stroke-dark dark:stroke-light" />
               )}
             </button>
           </div>
@@ -51,9 +51,9 @@ const NavBar = () => {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {theme == "dark" ? (
-              <SunIcon className="w-7 lg:w-9 fill-secondary" />
+              <SunIcon className="w-7 lg:w-9 fill-light" />
             ) : (
-              <MoonIcon className="w-7 lg:w-9 fill-primary" />
+              <MoonIcon className="w-7 lg:w-9 fill-dark" />
             )}
           </div>
         </div>

@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark: #2c3333;
+  --light: #cbe4de;
+  --accent: #0e8388;
+}
+
 @layer base {
   body {
-    @apply dark:bg-primary bg-secondary text-primary dark:text-secondary dark:border-secondary border-primary;
+    @apply dark:bg-dark bg-light text-dark dark:text-light dark:border-light border-dark;
   }
 
   h1,
@@ -13,12 +19,6 @@
   p {
     @apply select-none;
   }
-}
-
-:root {
-  --primary: #2c3333;
-  --secondary: #cbe4de;
-  --accent: #0e8388;
 }
 
 .fade-in {

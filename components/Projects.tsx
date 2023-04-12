@@ -39,7 +39,7 @@ const Project = ({
   backendLink,
 }: ProjectProps) => (
   <div className="relative hover:-translate-y-3 duration-500 ease-in-out">
-    <div className="flex flex-col justify-between p-5 border-2 rounded-lg border-primary hover:border-accent dark:border-secondary dark:hover:border-accent w-80 sm:w-full h-80 lg:h-96 group/card">
+    <div className="flex flex-col justify-between p-5 border-2 rounded-lg border-dark hover:border-accent dark:border-light dark:hover:border-accent w-80 sm:w-full h-80 lg:h-96 group/card">
       <div>
         <h3 className="mb-5 text-lg md:text-xl lg:text-2xl font-bold group-hover/card:text-accent">
           {title}
@@ -58,7 +58,7 @@ const Project = ({
               Frontend
             </p>
           )}
-          <LinkIcon className="w-5 lg:w-6 fill-primary dark:fill-secondary group-hover/link:fill-accent duration-300" />
+          <LinkIcon className="w-5 lg:w-6 fill-dark dark:fill-light group-hover/link:fill-accent duration-300" />
         </div>
       </Link>
       {backendLink && (
@@ -72,7 +72,7 @@ const Project = ({
             <p className="mr-1 sm:text-xs md:text-sm lg:text-base font-thin group-hover/backend-link:text-accent duration-300">
               Backend
             </p>
-            <LinkIcon className="w-5 lg:w-6 fill-primary dark:fill-secondary group-hover/backend-link:fill-accent duration-300" />
+            <LinkIcon className="w-5 lg:w-6 fill-dark dark:fill-light group-hover/backend-link:fill-accent duration-300" />
           </div>
         </Link>
       )}

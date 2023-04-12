@@ -12,7 +12,7 @@ const ContactSidebar = () => (
           rel="noopener noreferrer"
           className="p-3"
         >
-          <contact.icon className="mb-5 w-8 fill-accent hover:fill-primary dark:hover:fill-secondary duration-500" />
+          <contact.icon className="mb-5 w-8 fill-accent hover:fill-dark dark:hover:fill-light duration-500" />
         </Link>
       ))}
     </div>

@@ -26,7 +26,7 @@ const Experiences = () => {
                     ${
                       selectedCompany === company
                         ? "text-accent border-accent"
-                        : "border-primary dark:border-secondary"
+                        : "border-dark dark:border-light"
                     } `}
                   onClick={() => setSelectedCompany(company)}
                 >

@@ -20,7 +20,7 @@ const About = () => (
         width={2000}
         height={2000}
         priority
-        className="mx-auto my-auto rounded-full border-2 border-primary dark:border-secondary w-48 sm:w-52 md:w-80 lg:w-96"
+        className="mx-auto my-auto rounded-full border-2 border-dark dark:border-light w-48 sm:w-52 md:w-80 lg:w-96"
       />
     </div>
   </div>
