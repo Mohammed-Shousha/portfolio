@@ -63,11 +63,16 @@ const Experience = ({ role, date, description }: ExperienceProps) => {
     <div className="flex flex-col justify-start w-64 sm:w-72 md:w-96 lg:w-[30rem]">
       <h3 className="text-lg md:text-2xl lg:text-3xl font-bold">{role}</h3>
       <p className="text-gray-500 text-xs md:text-sm lg:text-base">{date}</p>
-      {description.map((desc, i) => (
-        <p key={i} className="text-sm md:text-base lg:text-lg">
-          ⨠ {desc}
-        </p>
-      ))}
+      <ul>
+        {description.map((desc, i) => (
+          <li
+            key={i}
+            className="text-sm md:text-base lg:text-lg before:content-['◆'] before:text-accent before:mr-1"
+          >
+            {desc}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
