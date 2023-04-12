@@ -1,17 +1,15 @@
 import { useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import Image from "next/image";
 import { navLinks } from "@/portfolioData";
+import MenuIcon from "../public/menu.svg";
+import CloseIcon from "../public/close.svg";
+import SunIcon from "../public/sun.svg";
+import MoonIcon from "../public/moon.svg";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  const themeIcon = theme === "dark" ? "sun.svg" : "moon.svg";
-  const menuIcon = theme === "dark" ? "menu.svg" : "menu-dark.svg";
-  const closeIcon = theme === "dark" ? "close.svg" : "close-dark.svg";
-  const navIcon = isMobileMenuOpen ? closeIcon : menuIcon;
 
   return (
     <nav>
@@ -40,24 +38,24 @@ const NavBar = () => {
               aria-label="Main menu"
               aria-expanded="false"
             >
-              <Image
-                src={navIcon}
-                alt="Menu"
-                width={24}
-                height={24}
-                className="h-8 w-8"
-              />
+              {isMobileMenuOpen ? (
+                <CloseIcon className="w-8 fill-primary dark:fill-secondary" />
+              ) : (
+                <MenuIcon className="w-8 stroke-primary dark:stroke-secondary" />
+              )}
             </button>
           </div>
 
-          <Image
-            src={themeIcon}
-            alt="Theme"
-            width={30}
-            height={30}
-            className="cursor-pointer absolute top-4 right-7 md:top-6 md:right-10 "
+          <div
+            className="cursor-pointer absolute top-4 right-7 md:top-6 lg:top-5 lg:right-10"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          />
+          >
+            {theme == "dark" ? (
+              <SunIcon className="w-7 lg:w-9 fill-secondary" />
+            ) : (
+              <MoonIcon className="w-7 lg:w-9 fill-primary" />
+            )}
+          </div>
         </div>
 
         <div className={`${isMobileMenuOpen ? "block" : "hidden"} md:hidden`}>
