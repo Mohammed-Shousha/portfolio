@@ -12,6 +12,10 @@ const Home = () => (
   <>
     <Head>
       <title>Mohammed Shousha</title>
+      <meta
+        name="description"
+        content="Hi I am a software engineer passionate about web development and machine learning."
+      />
     </Head>
     <NavBar />
     <ContactSidebar />
@@ -20,8 +24,8 @@ const Home = () => (
       <Skills />
       <Projects />
       <Experiences />
-      <Footer />
     </main>
+    <Footer />
   </>
 );
 
