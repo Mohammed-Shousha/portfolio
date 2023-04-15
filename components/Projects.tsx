@@ -2,24 +2,39 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/portfolioData";
 import LinkIcon from "../public/link.svg";
+import { motion } from "framer-motion";
+import { header, projectsContainer, item } from "@/styles/variants";
 
 const Projects = () => (
   <div id="projects" className="mx-auto py-28 container">
-    <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold">
+    <motion.h2
+      className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
+      variants={header}
+      initial="hide"
+      whileInView="show"
+      exit="hide"
+    >
       Projects
-    </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+    </motion.h2>
+    <motion.div
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
+      variants={projectsContainer}
+      initial="hide"
+      whileInView="show"
+      exit="hide"
+    >
       {projects.map((project, index) => (
-        <Project
-          key={index}
-          title={project.title}
-          description={project.description}
-          link={project.link}
-          technologies={project.technologies}
-          backendLink={project.backendLink}
-        />
+        <motion.div key={index} variants={item}>
+          <Project
+            title={project.title}
+            description={project.description}
+            link={project.link}
+            technologies={project.technologies}
+            backendLink={project.backendLink}
+          />
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   </div>
 );
 

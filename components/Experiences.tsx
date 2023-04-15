@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { experiences } from "@/portfolioData";
+import { motion } from "framer-motion";
+import { header, experienceContainer } from "@/styles/variants";
 
 const Experiences = () => {
   const companies = experiences.map((exp) => exp.company);
@@ -12,10 +14,22 @@ const Experiences = () => {
 
   return (
     <div id="experience" className="mb-20 py-28 container">
-      <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold">
+      <motion.h2
+        className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
+        variants={header}
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+      >
         Experience
-      </h2>
-      <div className="flex justify-center mx-auto">
+      </motion.h2>
+      <motion.div
+        className="flex justify-center mx-auto"
+        variants={experienceContainer}
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+      >
         <div>
           <ul className="w-20 lg:w-32">
             {companies.map((company) => (
@@ -47,7 +61,7 @@ const Experiences = () => {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

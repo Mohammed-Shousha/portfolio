@@ -1,9 +1,16 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { title, image } from "@/styles/variants";
 
 const About = () => (
-  <div id="about" className="mx-auto py-52 container fade-in">
+  <div id="about" className="mx-auto py-52 container">
     <div className="flex flex-row items-start">
-      <div>
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+        variants={title}
+      >
         <p className="mb-5 text-m sm:text-l md:text-xl lg:text-2xl font-normal text-accent">
           Hi, my name is
         </p>
@@ -13,15 +20,23 @@ const About = () => (
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
           I'm a Software Engineer.
         </h2>
-      </div>
-      <Image
-        src="/profile.jpg"
-        alt="my profile picture"
-        width={2000}
-        height={2000}
-        priority
-        className="mx-auto my-auto rounded-full border-2 border-dark dark:border-light w-48 sm:w-52 md:w-80 lg:w-96"
-      />
+      </motion.div>
+      <motion.div
+        variants={image}
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+        className="mx-auto my-auto w-48 sm:w-52 md:w-80 lg:w-96"
+      >
+        <Image
+          src="/profile.jpg"
+          alt="my profile picture"
+          width={2000}
+          height={2000}
+          priority
+          className=" rounded-full border-2 border-dark dark:border-light"
+        />
+      </motion.div>
     </div>
   </div>
 );
