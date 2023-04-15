@@ -9,6 +9,9 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth !important;
+  }
   body {
     @apply dark:bg-dark bg-light text-dark dark:text-light dark:border-light border-dark;
   }
