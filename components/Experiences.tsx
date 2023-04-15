@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { experiences } from "@/portfolioData";
 import { motion } from "framer-motion";
-import { header, experienceContainer } from "@/styles/variants";
+import { header, experienceContainer, experienceItem } from "@/styles/variants";
 
 const Experiences = () => {
   const companies = experiences.map((exp) => exp.company);
@@ -74,7 +74,13 @@ interface ExperienceProps {
 
 const Experience = ({ role, date, description }: ExperienceProps) => {
   return (
-    <div className="flex flex-col justify-start w-64 sm:w-72 md:w-96 lg:w-[30rem]">
+    <motion.div
+      className="flex flex-col justify-start w-64 sm:w-72 md:w-96 lg:w-[30rem]"
+      variants={experienceItem}
+      initial="hide"
+      whileInView="show"
+      exit="hide"
+    >
       <h3 className="text-lg md:text-2xl lg:text-3xl font-bold">{role}</h3>
       <p className="text-gray-500 text-xs md:text-sm lg:text-base">{date}</p>
       <ul>
@@ -87,7 +93,7 @@ const Experience = ({ role, date, description }: ExperienceProps) => {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 
