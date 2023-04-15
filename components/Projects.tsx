@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { header, projectsContainer, item } from "@/styles/variants";
 
 const Projects = () => (
-  <div id="projects" className="mx-auto py-28 container">
+  <section id="projects" className="mx-auto py-14 sm:py-28 container">
     <motion.h2
       className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
       variants={header}
@@ -35,7 +35,7 @@ const Projects = () => (
         </motion.div>
       ))}
     </motion.div>
-  </div>
+  </section>
 );
 
 interface ProjectProps {

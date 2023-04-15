@@ -2,7 +2,7 @@ import Link from "next/link";
 import { contacts } from "@/portfolioData";
 
 const ContactSidebar = () => (
-  <div className="hidden md:block fixed top-0 bottom-0 left-10 w-16">
+  <aside className="hidden md:block fixed top-0 bottom-0 left-10 w-16">
     <div className="flex flex-col justify-center justify-items-center mt-10 h-full">
       {contacts.map((contact) => (
         <Link
@@ -16,7 +16,7 @@ const ContactSidebar = () => (
         </Link>
       ))}
     </div>
-  </div>
+  </aside>
 );
 
 export default ContactSidebar;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { header, skillsContainer, item } from "@/styles/variants";
 
 const Skills = () => (
-  <div id="skills" className="mx-auto pt-28 container h-screen">
+  <section id="skills" className="mx-auto pt-14 sm:pt-28 container">
     <motion.h2
       className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
       variants={header}
@@ -34,7 +34,7 @@ const Skills = () => (
         </motion.div>
       ))}
     </motion.div>
-  </div>
+  </section>
 );
 
 export default Skills;

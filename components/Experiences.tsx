@@ -13,7 +13,7 @@ const Experiences = () => {
   );
 
   return (
-    <div id="experience" className="mb-20 py-28 container">
+    <section id="experience" className="mb-20 py-28 container">
       <motion.h2
         className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
         variants={header}
@@ -62,7 +62,7 @@ const Experiences = () => {
           ))}
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

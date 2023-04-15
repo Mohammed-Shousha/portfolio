@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { title, image } from "@/styles/variants";
 
 const About = () => (
-  <div id="about" className="mx-auto py-52 container">
-    <div className="flex flex-row items-start">
+  <header id="about" className="mx-auto py-40 sm:py-52 container">
+    <div className="flex flex-col-reverse sm:flex-row items-start">
       <motion.div
         initial="hide"
         whileInView="show"
@@ -26,7 +26,7 @@ const About = () => (
         initial="hide"
         whileInView="show"
         exit="hide"
-        className="mx-auto my-auto w-48 sm:w-52 md:w-80 lg:w-96"
+        className="mx-auto my-auto w-48 sm:w-56 md:w-80 lg:w-96"
       >
         <Image
           src="/profile.jpg"
@@ -34,11 +34,11 @@ const About = () => (
           width={2000}
           height={2000}
           priority
-          className=" rounded-full border-2 border-dark dark:border-light"
+          className="rounded-full border-2 border-dark dark:border-light"
         />
       </motion.div>
     </div>
-  </div>
+  </header>
 );
 
 export default About;
