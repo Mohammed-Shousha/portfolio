@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
-import ContactSidebar from "@/components/ContactSidebar";
+import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -18,7 +18,7 @@ const Home = () => (
       />
     </Head>
     <NavBar />
-    <ContactSidebar />
+    <Contact />
     <main className="mx-2 sm:mx-10 md:mx-32">
       <About />
       <Skills />
