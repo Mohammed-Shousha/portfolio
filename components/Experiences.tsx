@@ -13,13 +13,12 @@ const Experiences = () => {
   );
 
   return (
-    <section id="experience" className="mb-20 py-28 container">
+    <section id="experience" className="mb-20 py-20 sm:py-28 container">
       <motion.h2
         className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
         variants={header}
         initial="hide"
         whileInView="show"
-        exit="hide"
       >
         Experience
       </motion.h2>
@@ -28,7 +27,6 @@ const Experiences = () => {
         variants={experienceContainer}
         initial="hide"
         whileInView="show"
-        exit="hide"
       >
         <div>
           <ul className="w-20 lg:w-32">
@@ -79,7 +77,6 @@ const Experience = ({ role, date, description }: ExperienceProps) => {
       variants={experienceItem}
       initial="hide"
       whileInView="show"
-      exit="hide"
     >
       <h3 className="text-lg md:text-2xl lg:text-3xl font-bold">{role}</h3>
       <p className="text-gray-500 text-xs md:text-sm lg:text-base">{date}</p>

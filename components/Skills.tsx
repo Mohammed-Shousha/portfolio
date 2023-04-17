@@ -4,13 +4,12 @@ import { motion } from "framer-motion";
 import { header, skillsContainer, item } from "@/styles/variants";
 
 const Skills = () => (
-  <section id="skills" className="mx-auto pt-14 sm:pt-28 container">
+  <section id="skills" className="mx-auto py-20 sm:py-28 container">
     <motion.h2
       className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
       variants={header}
       initial="hide"
       whileInView="show"
-      exit="hide"
     >
       Skills
     </motion.h2>
@@ -19,7 +18,6 @@ const Skills = () => (
       variants={skillsContainer}
       initial="hide"
       whileInView="show"
-      exit="hide"
     >
       {skills.map((skill, index) => (
         <motion.div variants={item} key={index}>

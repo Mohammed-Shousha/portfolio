@@ -5,12 +5,7 @@ import { title, image } from "@/styles/variants";
 const About = () => (
   <header id="about" className="mx-auto py-40 sm:py-52 container">
     <div className="flex flex-col-reverse sm:flex-row items-start">
-      <motion.div
-        initial="hide"
-        whileInView="show"
-        exit="hide"
-        variants={title}
-      >
+      <motion.div initial="hide" whileInView="show" variants={title}>
         <p className="mb-5 text-m sm:text-l md:text-xl lg:text-2xl font-normal text-accent">
           Hi, my name is
         </p>
@@ -25,7 +20,6 @@ const About = () => (
         variants={image}
         initial="hide"
         whileInView="show"
-        exit="hide"
         className="mx-auto my-auto w-48 sm:w-56 md:w-80 lg:w-96"
       >
         <Image
