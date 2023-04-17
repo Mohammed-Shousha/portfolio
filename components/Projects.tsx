@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/portfolioData";
@@ -5,38 +6,45 @@ import LinkIcon from "../public/link.svg";
 import { motion } from "framer-motion";
 import { header, projectsContainer, item } from "@/styles/variants";
 
-const Projects = () => (
-  <section id="projects" className="mx-auto py-14 sm:py-28 container">
-    <motion.h2
-      className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
-      variants={header}
-      initial="hide"
-      whileInView="show"
-      exit="hide"
-    >
-      Projects
-    </motion.h2>
-    <motion.div
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
-      variants={projectsContainer}
-      initial="hide"
-      whileInView="show"
-      exit="hide"
-    >
-      {projects.map((project, index) => (
-        <motion.div key={index} variants={item}>
-          <Project
-            title={project.title}
-            description={project.description}
-            link={project.link}
-            technologies={project.technologies}
-            backendLink={project.backendLink}
-          />
-        </motion.div>
-      ))}
-    </motion.div>
-  </section>
-);
+const Projects = () => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  return (
+    <section id="projects" className="mx-auto py-20 sm:py-28 container">
+      <motion.h2
+        className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold"
+        variants={header}
+        initial="hide"
+        whileInView="show"
+      >
+        Projects
+      </motion.h2>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
+        variants={projectsContainer}
+        initial="hide"
+        whileInView="show"
+        viewport={{ margin: width <= 640 ? "60%" : "" }}
+      >
+        {projects.map((project, index) => (
+          <motion.div key={index} variants={item}>
+            <Project
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              technologies={project.technologies}
+              backendLink={project.backendLink}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+};
 
 interface ProjectProps {
   title: string;
