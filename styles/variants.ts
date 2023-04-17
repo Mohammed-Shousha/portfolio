@@ -61,7 +61,7 @@ export const skillsContainer: Variants = {
 
 export const projectsContainer: Variants = {
   hide: {
-    opacity: 1,
+    opacity: 0,
     scale: 0,
   },
   show: {
@@ -114,5 +114,45 @@ export const experienceItem: Variants = {
     transition: {
       type: "spring",
     },
+  },
+};
+
+export const sidebarContainer: Variants = {
+  hide: {
+    width: 0,
+  },
+  show: {
+    width: "60%",
+  },
+  exit: {
+    width: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.3,
+    },
+  },
+};
+
+export const sidebar: Variants = {
+  hide: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+};
+
+export const sidebarItem: Variants = {
+  hide: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
   },
 };
