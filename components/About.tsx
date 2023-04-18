@@ -13,7 +13,7 @@ const About = () => (
           Mohammed Shousha.
         </h1>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-          I'm a Software Engineer.
+          I&apos;m a Software Engineer.
         </h2>
       </motion.div>
       <motion.div
