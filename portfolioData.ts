@@ -180,7 +180,7 @@ export const projects = [
     description:
       "My portfolio website that showcases my skills, projects and experiences.",
     link: "https://github.com/Mohammed-Shousha/portfolio",
-    technologies: ["nextjs", "typescript", "tailwindcss"],
+    technologies: ["nextjs", "typescript", "tailwindcss", "framer-motion"],
   },
   {
     title: "Basic Banking System",
