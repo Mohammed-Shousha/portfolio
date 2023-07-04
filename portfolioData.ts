@@ -1,6 +1,6 @@
-import GithubIcon from "./public/github.svg";
-import LinkedinIcon from "./public/linkedin.svg";
-import EmailIcon from "./public/email.svg";
+import GithubIcon from "./public/icons/github.svg";
+import LinkedinIcon from "./public/icons/linkedin.svg";
+import EmailIcon from "./public/icons/email.svg";
 
 export const navLinks = [
   {
@@ -46,83 +46,85 @@ export const contacts = [
 export const skills = [
   {
     name: "HTML",
-    icon: "html.svg",
+    icon: "icons/html.svg",
   },
   {
     name: "CSS",
-    icon: "css.svg",
+    icon: "icons/css.svg",
   },
   {
     name: "JavaScript",
-    icon: "javascript.svg",
+    icon: "icons/javascript.svg",
   },
   {
     name: "TypeScript",
-    icon: "typescript.svg",
+    icon: "icons/typescript.svg",
   },
   {
     name: "React",
-    icon: "react.svg",
-  },
-  {
-    name: "Nodejs",
-    icon: "nodejs.svg",
-  },
-  {
-    name: "express",
-    icon: "express.svg",
-  },
-  {
-    name: "MongoDB",
-    icon: "mongodb.svg",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "postgresql.svg",
-  },
-  {
-    name: "GraphQL",
-    icon: "graphql.svg",
-  },
-  {
-    name: "Dart",
-    icon: "dart.svg",
-  },
-  {
-    name: "Flutter",
-    icon: "flutter.svg",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "tailwindcss.svg",
-  },
-  {
-    name: "styled-components",
-    icon: "styledcomponents.svg",
+    icon: "icons/react.svg",
   },
   {
     name: "Nextjs",
-    icon: "nextjs.svg",
+    icon: "icons/nextjs.svg",
   },
+  {
+    name: "React Native",
+    icon: "icons/react-native.svg",
+  },
+  {
+    name: "Expo",
+    icon: "icons/expo.svg",
+  },
+  {
+    name: "Dart",
+    icon: "icons/dart.svg",
+  },
+  {
+    name: "Flutter",
+    icon: "icons/flutter.svg",
+  },
+
+  {
+    name: "Nodejs",
+    icon: "icons/nodejs.svg",
+  },
+  {
+    name: "express",
+    icon: "icons/express.svg",
+  },
+  {
+    name: "MongoDB",
+    icon: "icons/mongodb.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "icons/postgresql.svg",
+  },
+  {
+    name: "GraphQL",
+    icon: "icons/graphql.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "icons/tailwindcss.svg",
+  },
+  {
+    name: "styled-components",
+    icon: "icons/styledcomponents.svg",
+  },
+
   {
     name: "Python",
-    icon: "python.svg",
+    icon: "icons/python.svg",
   },
   {
-    name: "scikit-learn",
-    icon: "scikitlearn.svg",
-  },
-  {
-    name: "Tensorflow",
-    icon: "tensorflow.svg",
+    name: "FastAPI",
+    icon: "icons/fastapi.svg",
   },
   {
     name: "Git",
-    icon: "git.svg",
-  },
-  {
-    name: "Power BI",
-    icon: "powerbi.svg",
+    icon: "icons/git.svg",
   },
 ];
 
@@ -137,8 +139,8 @@ export const projects = [
       "javascript",
       "styledcomponents",
       "nodejs",
-      "graphql",
       "express",
+      "graphql",
       "mongodb",
       "stripe",
     ],
@@ -150,15 +152,34 @@ export const projects = [
       "An easy-to-use recipes app that offers the user a variety of delicious recipes to choose from.",
     link: "https://github.com/Mohammed-Shousha/recipes-app",
     technologies: [
-      "react",
+      "react-native",
+      "expo",
       "javascript",
       "styledcomponents",
-      "graphql",
       "nodejs",
       "express",
+      "graphql",
       "postgresql",
     ],
     backendLink: "https://github.com/Mohammed-Shousha/recipes-app-backend",
+  },
+  {
+    title: "SAP (Smart Automated Pharmacy)",
+    description:
+      "Smart Automated Pharmacy (SAP) is my graduation project, revolutionizing medication access and management.",
+    link: "https://github.com/Mohammed-Shousha/graduation-project",
+    technologies: [
+      "dart",
+      "flutter",
+      "nodejs",
+      "express",
+      "graphql",
+      "python",
+      "fastapi",
+      "mongodb",
+      "stripe",
+      "raspberrypi",
+    ],
   },
   {
     title: "Smart Shopping Cart",
@@ -196,13 +217,6 @@ export const projects = [
       "mongodb",
     ],
   },
-  {
-    title: "Finding Donors for CharityML",
-    description:
-      "A notebook to predict whether an individual makes more than $50,000 using data collected from the 1994 U.S Census",
-    link: "https://github.com/Mohammed-Shousha/finding-donors-project",
-    technologies: ["python", "scikitlearn"],
-  },
 ];
 
 export const experiences = [
@@ -211,8 +225,8 @@ export const experiences = [
     company: "alx_africa",
     date: "Feb 2023 - Present",
     description: [
-      "Acquired valuable technical and teamwork skills that I will continue to apply in my future career as a software engineer.",
-      "Participated in peer learning days, received guidance from technical mentors, and contributed to community forums.",
+      "Acquired valuable technical and teamwork skills applicable to future software engineering roles.",
+      "Engaged in peer learning sessions, received support from technical mentors, and actively contributed to community forums.",
     ],
   },
   {
@@ -220,9 +234,9 @@ export const experiences = [
     company: "The Sparks Foundation",
     date: "Feb 2023 - Mar 2023",
     description: [
-      "Tasked to create a basic banking system that enables transferring money between customers andviewing all customers and their previous transfers.",
-      "Incorporated a variety of modern technologies such as React, Vite, Typescript, Node.js, Express, and MongoDB.",
-      "Designed and implemented a responsive user interface to optimize usability.",
+      "Developed a basic banking system for facilitating customer money transfers and providing comprehensive transaction history.",
+      "Incorporated a variety of modern technologies such as React, Typescript, Node.js, Express, and MongoDB.",
+      "Designed and implemented a responsive user interface to enhance usability.",
     ],
   },
   {
@@ -230,9 +244,9 @@ export const experiences = [
     company: "Information Technology Institute (ITI)",
     date: "Jul 2022 - Sep 2022",
     description: [
-      "Created IoT applications using the Master of Things platform.",
-      "Learned about IoT application protocols.",
-      "Used IoT devices such as Sens'it.",
+      "Designed and developed innovative IoT applications leveraging the Master of Things platform.",
+      "Studied IoT application protocols to enhance understanding of IoT application development.",
+      "Applied Sens'it and other IoT devices in real-world scenarios, acquiring practical experience.",
     ],
   },
 ];

@@ -14,7 +14,7 @@ const Home = () => (
       <title>Mohammed Shousha</title>
       <meta
         name="description"
-        content="Hi I am a software engineer passionate about web development and machine learning."
+        content="Hi I am a software engineer passionate about web development. I have experience in building web applications using React, Express.js, MongoDB, and GraphQL."
       />
     </Head>
     <NavBar />
