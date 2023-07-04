@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/portfolioData";
-import LinkIcon from "../public/link.svg";
+import LinkIcon from "../public/icons/link.svg";
 import { motion } from "framer-motion";
 import { header, projectsContainer, item } from "@/styles/variants";
 
@@ -103,7 +103,7 @@ const Project = ({
         {technologies.map((technology, index) => (
           <div key={index} className="mr-3 mb-3">
             <Image
-              src={`${technology}.svg`}
+              src={`icons/${technology}.svg`}
               alt={technology}
               width={24}
               height={24}

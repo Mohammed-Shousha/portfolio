@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { navLinks } from "@/portfolioData";
-import MenuIcon from "../public/menu.svg";
-import CloseIcon from "../public/close.svg";
-import SunIcon from "../public/sun.svg";
-import MoonIcon from "../public/moon.svg";
+import MenuIcon from "../public/icons/menu.svg";
+import CloseIcon from "../public/icons/close.svg";
+import SunIcon from "../public/icons/sun.svg";
+import MoonIcon from "../public/icons/moon.svg";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { sidebarContainer, sidebar, sidebarItem } from "@/styles/variants";
 
